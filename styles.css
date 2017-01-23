@@ -1,0 +1,94 @@
+html, body{
+  margin:0;
+  padding:0;
+  font-size:16px;
+  font-family: 'Crimson Text', serif !important;
+  line-height:1.5em;
+}
+.column{
+  width:420px;
+  margin:0 auto;
+}
+.content{
+  position:relative;
+  width:100%;
+  height:50vh;
+  color:#333;
+}
+.caretAnimation{
+  color:#111;
+  animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+.controls{
+  width:100%;
+  margin-top:1em;
+}
+.controls i:hover{
+  color:#aaa;
+  pointer: button;
+}
+.fade{
+  position:absolute;
+  z-index:1000;
+  width:150%;
+  height:50px;
+  top:-70px;
+  left:-25%;
+  -webkit-box-shadow: 0px 19px 55px 5px rgba(255,255,255,1);
+-moz-box-shadow: 0px 19px 55px 5px rgba(255,255,255,1);
+box-shadow: 0px 19px 55px 5px rgba(255,255,255,1);
+}
+.savedText{
+  position:absolute;
+  bottom:1.5em;
+  width:100%;
+  color:#999;
+  white-space:pre-wrap;
+}
+.textInput{
+  position:absolute;
+  bottom:0em;
+  width:100%;
+  clear:both;
+  border:none;
+  font-size:1em;
+}
+input:focus {
+    outline:none;
+}
+
+a{
+  color:#ddd;
+  text-decoration:none;
+}
+a:hover{
+  color:#333;
+  text-decoration:underline;
+}
+.lengthIndicator{
+  position:absolute;
+  top:0px;
+  left:0px;
+  box-sizing: border-box;
+  padding-left:40px;
+  padding-top:40px;
+  width:400px;
+  /*
+  Scale this by 0.2 (or one fifth)
+  */
+  max-height: 500vh;
+  overflow-y: scroll;
+  transform-origin:top left;
+  transform: scale(0.2, 0.2);
+  white-space:pre-wrap;
+}
+.lengthIndicator::-webkit-scrollbar {
+    display: none;
+}
+.settings{
+  width:100%;
+  margin-top:1em;
+}
